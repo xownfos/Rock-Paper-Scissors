@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-overlap of html css js practice
+js practice rock paper scissors game played from browser prompts and console output

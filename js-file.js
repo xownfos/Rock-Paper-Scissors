@@ -56,12 +56,13 @@ function scoreFunction(winner) {
 }
 
 function alertFunction() {
-    const humanChoice = getHumanChoice(event.target.id);
+    const humanChoice = getHumanChoice(event.currentTarget.id);
     const computerChoice = getComputerChoice();
     winner = playRound(humanChoice, computerChoice)
     winnerText.textContent = winner;
     scoreFunction(winner);
-    
+    choiceText.textContent = "You chose: " + humanChoice +
+                             ". Computer chose: " + computerChoice + ".";
 }
 
 
@@ -69,12 +70,16 @@ let playerScore = 0;
 let computerScore = 0;
 let winner = "Click a button to play!";
 let score = "Player: " + playerScore + "  Computer: " + computerScore;
+let choice = "";
 const container = document.querySelector("#container");
 
-const buttons = document.querySelectorAll(".rps-button");
-buttons.forEach(button => {
-    button.addEventListener("click", alertFunction);
+const images = document.querySelectorAll('.rps-img');
+        images.forEach(img => {
+            img.addEventListener('click', alertFunction);
 });
+
+const choiceText = document.getElementById("choice-text");
+choiceText.textContent = choice;
 
 const winnerText = document.getElementById("winner-text");
 winnerText.textContent = winner;

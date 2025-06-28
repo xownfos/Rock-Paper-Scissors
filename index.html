@@ -7,10 +7,34 @@
     <script src="js-file.js" defer></script>
 </head>
 <body>
-    <button class="rps-button" id="rock">Rock</button>
-    <button class="rps-button" id="paper">Paper</button>
-    <button class="rps-button" id="scissors">Scissors</button>
+    <div style="display: flex; justify-content: center; gap: 20px;">
+        <div>
+            <img src="./img/rock.png" 
+                 alt="Picture of Rock" 
+                 width="100" height="100" 
+                 class="rps-img" 
+                 id="rock">
+            <div class="rps-label">Rock</div>
+        </div>
+        <div>
+            <img src="./img/paper.png" 
+                 alt="Picture of Paper" 
+                 width="100" height="100" 
+                 class="rps-img" 
+                 id="paper">
+            <div class="rps-label">Paper</div>
+        </div>
+        <div>
+            <img src="./img/scissors.png" 
+                 alt="Picture of Scissors" 
+                 width="100" height="100" 
+                 class="rps-img" 
+                 id="scissors">
+            <div class="rps-label">Scissors</div>
+        </div>
+    </div>
     <div id="container">
+        <p id="choice-text"></p>
         <p id="winner-text"></p>
         <p id="score-text"></p>
     </div>
